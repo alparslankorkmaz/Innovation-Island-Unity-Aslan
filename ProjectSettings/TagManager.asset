@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MobileCanvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Minimap
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 855705027
+    locked: 0
+  - name: Islands
+    uniqueID: 505994177
+    locked: 0
+  - name: Paths and Bridges
+    uniqueID: 4099213149
+    locked: 0
+  - name: Trees and Terrain
+    uniqueID: 2435164091
+    locked: 0
+  - name: Buildings
+    uniqueID: 1998528593
+    locked: 0
+  - name: Building signs
+    uniqueID: 2007251817
+    locked: 0
+  - name: Walls
+    uniqueID: 15395761
+    locked: 0
+  - name: Collision Obj
+    uniqueID: 1235880255
+    locked: 0
+  - name: Surface
+    uniqueID: 1433670827
+    locked: 0
+  - name: Player
+    uniqueID: 616387777
+    locked: 0
+  - name: Walk through objects
+    uniqueID: 3861951055
+    locked: 0
+  - name: PopUps
+    uniqueID: 3195095271
+    locked: 0
