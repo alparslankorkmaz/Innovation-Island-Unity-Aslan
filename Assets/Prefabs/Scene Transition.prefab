@@ -71,6 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021a2ea0a0f9d425dabab6a8df55132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SampleScene
-  playerPosition: {x: -4.861, y: 4}
+  sceneToLoad: EnterpriseLinux
+  playerPosition: {x: 0, y: 0.175}
   playerStorage: {fileID: 11400000, guid: 17fa22ed450a44cb781911a300716f62, type: 2}

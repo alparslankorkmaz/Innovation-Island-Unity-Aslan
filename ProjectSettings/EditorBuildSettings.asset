@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnterpriseLinux.unity
     guid: 2ca8ecce835474e35bc449daf55b5dbc
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 2471a7e96849c419ba23b90be83efbcf
   m_configObjects: {}
