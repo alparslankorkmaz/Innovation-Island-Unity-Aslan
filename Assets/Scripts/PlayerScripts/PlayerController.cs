@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 1f;
     float inputHorizontal;
     float inputVertical;
+    public VectorValue startingPosition;
 
     // Animations and states
     Animator animator;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
+        transform.position = startingPosition.initialValue;
     }
 
     // Update is called once per frame

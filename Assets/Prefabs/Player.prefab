@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 616387777
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 20
   m_Sprite: {fileID: 1264338869, guid: 8d82da50c604047db838ab7100c71992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 616387777
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -127391154, guid: 8d82da50c604047db838ab7100c71992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 1
+  startingPosition: {fileID: 11400000, guid: 17fa22ed450a44cb781911a300716f62, type: 2}
   footstepsSound: {fileID: 2829885810363587933}
 --- !u!82 &2829885810363587933
 AudioSource:
