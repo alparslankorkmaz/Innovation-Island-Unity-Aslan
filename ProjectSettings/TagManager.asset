@@ -63,6 +63,9 @@ TagManager:
   - name: Walls
     uniqueID: 15395761
     locked: 0
+  - name: Carpets
+    uniqueID: 3988832867
+    locked: 0
   - name: Collision Obj
     uniqueID: 1235880255
     locked: 0
