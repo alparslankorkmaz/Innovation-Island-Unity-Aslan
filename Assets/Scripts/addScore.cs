@@ -23,6 +23,9 @@ public class addScore : MonoBehaviour
             Destroy(other.gameObject);
             coinsFound.text = coinNum + "/5";
         }
+        if (coinNum == 5)
+        {
+            Debug.Log("Found all the coins!");
+        }
     }
-
 }
