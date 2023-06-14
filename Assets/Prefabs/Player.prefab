@@ -367,3 +367,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsFound: {fileID: 0}
+  formCanvas: {fileID: 0}

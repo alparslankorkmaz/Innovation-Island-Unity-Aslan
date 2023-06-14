@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SendToGoogle : MonoBehaviour
 {
+    [SerializeField]
     public GameObject participantName;
     public GameObject email;
     public GameObject phone;
@@ -16,7 +17,6 @@ public class SendToGoogle : MonoBehaviour
     private string Email;
     private string Phone;
 
-    [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpdp47dTpu_Z0r3szSmZvNJPXYi_8ccKur9ASrXjidSiMPew/formResponse";
 
     public void Send()
@@ -25,8 +25,23 @@ public class SendToGoogle : MonoBehaviour
         Email = email.GetComponent<InputField>().text;
         Phone = phone.GetComponent<InputField>().text;
 
-        StartCoroutine(Post(Name, Email, Phone));
-        Form.SetActive(false);
+        if (string.IsNullOrEmpty(Name))
+        {
+            Form.SetActive(true);
+        }
+        else if (string.IsNullOrEmpty(Email))
+        {
+            Form.SetActive(true);
+        }
+        else if (string.IsNullOrEmpty(Phone))
+        {
+            Form.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(Post(Name, Email, Phone));
+            Form.SetActive(false);
+        }
     }
 
     IEnumerator Post(string name, string email, string phone)
