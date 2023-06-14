@@ -7,12 +7,14 @@ public class addScore : MonoBehaviour
 {
     public Text coinsFound;
     private int coinNum;
+    public GameObject formCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
         coinNum = 0;
         coinsFound.text = coinNum + "/5";
+        formCanvas.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +27,7 @@ public class addScore : MonoBehaviour
         }
         if (coinNum == 5)
         {
+            formCanvas.SetActive(true);
             Debug.Log("Found all the coins!");
         }
     }

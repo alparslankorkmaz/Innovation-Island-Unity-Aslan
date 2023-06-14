@@ -10,6 +10,7 @@ public class SendToGoogle : MonoBehaviour
     public GameObject participantName;
     public GameObject email;
     public GameObject phone;
+    public GameObject Form;
 
     private string Name;
     private string Email;
@@ -25,6 +26,7 @@ public class SendToGoogle : MonoBehaviour
         Phone = phone.GetComponent<InputField>().text;
 
         StartCoroutine(Post(Name, Email, Phone));
+        Form.SetActive(false);
     }
 
     IEnumerator Post(string name, string email, string phone)
