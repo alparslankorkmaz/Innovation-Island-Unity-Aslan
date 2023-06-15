@@ -14,7 +14,6 @@ public class addScore : MonoBehaviour
     {
         coinNum = 0;
         coinsFound.text = coinNum + "/5";
-        formCanvas.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
