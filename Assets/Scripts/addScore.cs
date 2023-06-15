@@ -13,7 +13,7 @@ public class addScore : MonoBehaviour
     void Start()
     {
         coinNum = 0;
-        coinsFound.text = coinNum + "/5";
+        coinsFound.text = coinNum + "/6";
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -22,9 +22,9 @@ public class addScore : MonoBehaviour
         {
             coinNum += 1;
             Destroy(other.gameObject);
-            coinsFound.text = coinNum + "/5";
+            coinsFound.text = coinNum + "/6";
         }
-        if (coinNum == 5)
+        if (coinNum == 6)
         {
             formCanvas.SetActive(true);
             Debug.Log("Found all the coins!");
