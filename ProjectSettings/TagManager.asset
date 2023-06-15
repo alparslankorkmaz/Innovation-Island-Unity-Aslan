@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MobileCanvas
   - Coin
+  - Video
   layers:
   - Default
   - TransparentFX
