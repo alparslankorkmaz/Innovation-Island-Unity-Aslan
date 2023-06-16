@@ -11159,10 +11159,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopupWelcome
       objectReference: {fileID: 0}
-    - target: {fileID: 6339598401859290094, guid: 8571f300f62c543fc949ff8dcd5cd2f0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6fff5f109c100479a9774b07b4927c9b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8571f300f62c543fc949ff8dcd5cd2f0, type: 3}
 --- !u!1001 &419062077
