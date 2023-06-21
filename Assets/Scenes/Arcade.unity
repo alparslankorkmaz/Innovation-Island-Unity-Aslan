@@ -2679,13 +2679,33 @@ PrefabInstance:
       propertyPath: formCanvas
       value: 
       objectReference: {fileID: 1684831110}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8868452547012501814, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
 --- !u!4 &1605831555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2829885810363587907, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
   m_PrefabInstance: {fileID: 1605831554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1605831556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2829885810774028294, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
+  m_PrefabInstance: {fileID: 1605831554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605831557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605831556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4326da4f0694548ac279053b30290f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsFound: {fileID: 925666492}
+  formCanvas: {fileID: 1684831110}
 --- !u!1001 &1679710235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21224,6 +21244,10 @@ PrefabInstance:
     - target: {fileID: 8621298310614537360, guid: 1fd0a8b562f924b6cb27e7f59e518dd2, type: 3}
       propertyPath: m_Name
       value: CoinCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621298310614537360, guid: 1fd0a8b562f924b6cb27e7f59e518dd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd0a8b562f924b6cb27e7f59e518dd2, type: 3}
