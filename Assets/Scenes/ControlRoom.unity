@@ -9273,6 +9273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FormCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5160181519433658232, guid: 47d7ac640475240ebb10a98fcf296d92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d7ac640475240ebb10a98fcf296d92, type: 3}
 --- !u!1 &269669238
