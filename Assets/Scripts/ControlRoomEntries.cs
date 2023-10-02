@@ -23,7 +23,7 @@ public class ControlRoomEntries : MonoBehaviour
     private string JobTitle;
     private string CompanyName;
 
-    private string BASE_URL = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSeXJrYU8PqtAFYL4Ll1JGiads4cZXpRHf3o2xnUCZoyr-3mAw/formResponse";
+    private string BASE_URL = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdHEphnAzLrrHBfrndpKKl6-UlEXeTqdv6ULILGBjSU61td6g/formResponse";
 
     public void Send()
     {
@@ -64,12 +64,12 @@ public class ControlRoomEntries : MonoBehaviour
     IEnumerator Post(string firstName, string lastName, string email, string phone, string jobTitle, string companyName)
     {
         WWWForm form = new WWWForm();
-        form.AddField("entry.1247172104", firstName);
-        form.AddField("entry.1767786338", lastName);
-        form.AddField("entry.1622462287", email);
-        form.AddField("entry.1711924341", phone);
-        form.AddField("entry.1800499547", jobTitle);
-        form.AddField("entry.562565364", companyName);
+        form.AddField("entry.970297979", firstName);
+        form.AddField("entry.1514677201", lastName);
+        form.AddField("entry.1424899601", email);
+        form.AddField("entry.1665152882", phone);
+        form.AddField("entry.1888072721", jobTitle);
+        form.AddField("entry.1253999080", companyName);
 
         UnityWebRequest www = UnityWebRequest.Post(BASE_URL, form);
         yield return www.SendWebRequest();
