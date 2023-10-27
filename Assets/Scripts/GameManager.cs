@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()
     {
-        for (int = 0; int < this.ghosts.Length; i++)
+        for (int i = 0; i < this.ghosts.Length; i++)
         {
             this.ghosts[i].gameObject.SetActive(true);
         }
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        for (int = 0; int < this.ghosts.Length; i++)
+        for (int i = 0; i < this.ghosts.Length; i++)
         {
             this.ghosts[i].gameObject.SetActive(false);
         }
