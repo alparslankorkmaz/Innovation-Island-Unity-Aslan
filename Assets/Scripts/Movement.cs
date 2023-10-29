@@ -8,10 +8,10 @@ public class Movement : MonoBehaviour
     public Vector2 initialDirection;
     public LayerMask obstacleLayer;
 
-    public new Rigidbody2D rigidbody { get; private set; }
-    public Vector2 direction { get; private set; }
-    public Vector2 nextDirection { get; private set; }
-    public Vector3 startingPosition { get; private set; }
+    public new Rigidbody2D rigidbody;
+    public Vector2 direction;
+    public Vector2 nextDirection;
+    public Vector3 startingPosition;
 
     private void Awake()
     {
@@ -38,7 +38,8 @@ public class Movement : MonoBehaviour
     {
         // Try to move in the next direction while it's queued to make movements
         // more responsive
-        if (nextDirection != Vector2.zero) {
+        if (nextDirection != Vector2.zero)
+        {
             SetDirection(nextDirection);
         }
     }

@@ -2873,6 +2873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3052933705076986399, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8868452547012501814, guid: aa291dbdea39e45a5971382ad8aa4daa, type: 3}
       propertyPath: coinsFound
       value: 
