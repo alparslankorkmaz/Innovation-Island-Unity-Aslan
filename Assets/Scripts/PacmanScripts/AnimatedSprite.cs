@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class AnimatedSprite_Pacman : MonoBehaviour
+public class AnimatedSprite : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer { get; private set; }
     public Sprite[] sprites;

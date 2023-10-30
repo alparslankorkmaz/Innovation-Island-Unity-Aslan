@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Movement))]
 public class Pacman : MonoBehaviour
 {
-    public AnimatedSprite_Pacman deathSequence;
+    public AnimatedSprite deathSequence;
     public SpriteRenderer spriteRenderer { get; private set; }
     public new Collider2D collider { get; private set; }
     public Movement movement { get; private set; }
