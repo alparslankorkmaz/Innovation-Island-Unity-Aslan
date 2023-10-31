@@ -1,18 +1,18 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Movement))]
+// [RequireComponent(typeof(PacmanMovement))]
 public class Pacman : MonoBehaviour
 {
     public AnimatedSprite deathSequence;
     public SpriteRenderer spriteRenderer { get; private set; }
     public new Collider2D collider { get; private set; }
-    public Movement movement { get; private set; }
+    public PacmanMovement movement { get; private set; }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
-        movement = GetComponent<Movement>();
+        movement = GetComponent<PacmanMovement>();
     }
 
     private void Update()
@@ -36,8 +36,8 @@ public class Pacman : MonoBehaviour
         }
 
         // Rotate pacman to face the movement direction
-        float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
-        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+        // float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
+        // transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
     }
 
     public void ResetState()
