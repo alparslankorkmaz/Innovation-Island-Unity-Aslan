@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arcade.unity
     guid: 03d2a3ea3d6b24c3facf1f972ebb753f
+  - enabled: 1
+    path: Assets/Scenes/Pacman.unity
+    guid: cb403e0dd1883402abbb1df5ce0d18d8
   m_configObjects: {}

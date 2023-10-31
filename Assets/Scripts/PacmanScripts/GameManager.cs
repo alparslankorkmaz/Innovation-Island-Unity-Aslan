@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public Pacman pacman;
     public Transform pellets;
 
+    public Button PlayButton;
+    public GameObject MainMenu;
+
     public Text gameOverText;
     public Text scoreText;
     public Text livesText;
@@ -15,10 +18,26 @@ public class GameManager : MonoBehaviour
     public int score { get; private set; }
     public int lives { get; private set; }
 
-    private void Start()
+
+    private void Awake()
     {
-        NewGame();
+        Time.timeScale = 0f;
     }
+
+    private void OnEnable()
+    {
+        PlayButton.onClick.AddListener(NewGame);
+    }
+    private void OnDisable()
+    {
+        PlayButton.onClick.RemoveListener(NewGame);
+    }
+
+
+    // private void Start()
+    // {
+    //     NewGame();
+    // }
 
     private void Update()
     {
@@ -30,6 +49,9 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
+        Time.timeScale = 1f;
+        PlayButton.gameObject.SetActive(false);
+        MainMenu.gameObject.SetActive(false);
         SetScore(0);
         SetLives(3);
         NewRound();

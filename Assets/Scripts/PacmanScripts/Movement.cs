@@ -7,7 +7,6 @@ public class Movement : MonoBehaviour
     public float speedMultiplier = 1f;
     public Vector2 initialDirection;
     public LayerMask obstacleLayer;
-
     public new Rigidbody2D rigidbody;
     public Vector2 direction;
     public Vector2 nextDirection;
