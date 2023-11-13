@@ -15,6 +15,8 @@ public class PacmanMovement : MonoBehaviour
     float inputHorizontal;
     float inputVertical;
 
+    bool facingRight = true;
+
 
     private void Awake()
     {
@@ -46,12 +48,21 @@ public class PacmanMovement : MonoBehaviour
             SetDirection(nextDirection);
         }
 
-        inputHorizontal = SimpleInput.GetAxis("Horizontal");
-        inputVertical = SimpleInput.GetAxis("Vertical");
 
-        float angle = Mathf.Atan2(inputVertical, inputHorizontal);
-        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+        // Rotate pacman to face the movement direction
+        // float angle = Mathf.Atan2(inputVertical, inputHorizontal);
+        // transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
 
+
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     private void FixedUpdate()
@@ -60,7 +71,24 @@ public class PacmanMovement : MonoBehaviour
         // Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
 
         // rigidbody.MovePosition(position + translation);
+
+        inputHorizontal = SimpleInput.GetAxis("Horizontal");
+        inputVertical = SimpleInput.GetAxis("Vertical");
+
         rigidbody.velocity = new Vector2(inputHorizontal, inputVertical) * speed;
+
+        // if (inputHorizontal != 0)
+        // {
+        //     rigidbody.AddForce(new Vector2(inputHorizontal, inputVertical) * speed);
+        // }
+        if (inputHorizontal > 0 && !facingRight)
+        {
+            Flip();
+        }
+        if (inputHorizontal < 0 && facingRight)
+        {
+            Flip();
+        }
 
     }
 
