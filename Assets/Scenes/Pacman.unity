@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &40288244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2373,7 +2373,7 @@ GameObject:
   - component: {fileID: 1371259753}
   - component: {fileID: 1371259752}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd05a4b45b447d79da306a388967b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {x: 0.3, y: 1.9}
+  playerPosition: {x: 0.31, y: 2.8}
   playerStorage: {fileID: 11400000, guid: 17fa22ed450a44cb781911a300716f62, type: 2}
 --- !u!114 &1371259753
 MonoBehaviour:
@@ -11252,7 +11252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdbdc2870c0a2416c87e7208dd2e7cfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b9f9876b59514f55b0a095ce8accf85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
