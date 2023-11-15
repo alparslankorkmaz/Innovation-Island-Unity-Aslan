@@ -15,7 +15,6 @@ public class PacmanMovement : MonoBehaviour
     float inputHorizontal;
     float inputVertical;
 
-    bool facingRight = true;
 
 
     private void Awake()
@@ -56,18 +55,10 @@ public class PacmanMovement : MonoBehaviour
 
     }
 
-    void Flip()
-    {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
 
-        facingRight = !facingRight;
-    }
 
     private void FixedUpdate()
     {
-
         // Original Pacman Movement
         Vector2 position = rigidbody.position;
         Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
@@ -80,14 +71,7 @@ public class PacmanMovement : MonoBehaviour
 
         // rigidbody.velocity = new Vector2(inputHorizontal, inputVertical) * speed;
 
-        if (inputHorizontal > 0 && !facingRight)
-        {
-            Flip();
-        }
-        if (inputHorizontal < 0 && facingRight)
-        {
-            Flip();
-        }
+
 
     }
 

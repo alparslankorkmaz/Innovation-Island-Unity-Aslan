@@ -7,12 +7,22 @@ public class Pacman : MonoBehaviour
     public SpriteRenderer spriteRenderer { get; private set; }
     public new Collider2D collider { get; private set; }
     public PacmanMovement movement;
+    bool facingRight = true;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
         movement = GetComponent<PacmanMovement>();
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
     private void Update()
@@ -33,6 +43,15 @@ public class Pacman : MonoBehaviour
         else if (SimpleInput.GetKeyDown(KeyCode.D) || SimpleInput.GetKeyDown(KeyCode.RightArrow))
         {
             movement.SetDirection(Vector2.right);
+        }
+
+        if (SimpleInput.GetKeyDown(KeyCode.RightArrow) && !facingRight)
+        {
+            Flip();
+        }
+        if (SimpleInput.GetKeyDown(KeyCode.LeftArrow) && facingRight)
+        {
+            Flip();
         }
 
         // Rotate pacman to face the movement direction
