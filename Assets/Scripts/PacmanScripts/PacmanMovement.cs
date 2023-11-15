@@ -67,22 +67,19 @@ public class PacmanMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Original Pacman Movement
-        // Vector2 position = rigidbody.position;
-        // Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
 
-        // rigidbody.MovePosition(position + translation);
+        // Original Pacman Movement
+        Vector2 position = rigidbody.position;
+        Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
+
+        rigidbody.MovePosition(position + translation);
 
         // Mobile adaptation
-        inputHorizontal = SimpleInput.GetAxis("Horizontal");
-        inputVertical = SimpleInput.GetAxis("Vertical");
+        // inputHorizontal = SimpleInput.GetAxis("Horizontal");
+        // inputVertical = SimpleInput.GetAxis("Vertical");
 
-        rigidbody.velocity = new Vector2(inputHorizontal, inputVertical) * speed;
+        // rigidbody.velocity = new Vector2(inputHorizontal, inputVertical) * speed;
 
-        // if (inputHorizontal != 0)
-        // {
-        //     rigidbody.AddForce(new Vector2(inputHorizontal, inputVertical) * speed);
-        // }
         if (inputHorizontal > 0 && !facingRight)
         {
             Flip();

@@ -6,7 +6,7 @@ public class Pacman : MonoBehaviour
     public AnimatedSprite deathSequence;
     public SpriteRenderer spriteRenderer { get; private set; }
     public new Collider2D collider { get; private set; }
-    public PacmanMovement movement { get; private set; }
+    public PacmanMovement movement;
 
     private void Awake()
     {
