@@ -13,25 +13,25 @@ public class GameManager : MonoBehaviour
     public Text gameOverText;
     public Text scoreText;
     public Text livesText;
+    public GameObject Leaderboard;
 
     public int ghostMultiplier { get; private set; } = 1;
     public int score { get; private set; }
     public int lives { get; private set; }
-
 
     private void Awake()
     {
         Time.timeScale = 0f;
     }
 
-    private void OnEnable()
-    {
-        PlayButton.onClick.AddListener(NewGame);
-    }
-    private void OnDisable()
-    {
-        PlayButton.onClick.RemoveListener(NewGame);
-    }
+    // private void OnEnable()
+    // {
+    //     PlayButton.onClick.AddListener(NewGame);
+    // }
+    // private void OnDisable()
+    // {
+    //     PlayButton.onClick.RemoveListener(NewGame);
+    // }
 
 
     // private void Start()
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (lives <= 0 && Input.anyKeyDown)
+        if (lives <= 0 && Input.GetKeyDown(KeyCode.Return))
         {
             NewGame();
         }
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         Time.timeScale = 1f;
-        PlayButton.gameObject.SetActive(false);
+        // PlayButton.gameObject.SetActive(false);
         MainMenu.gameObject.SetActive(false);
         SetScore(0);
         SetLives(3);
@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     private void NewRound()
     {
         gameOverText.enabled = false;
+        Leaderboard.SetActive(false);
 
         foreach (Transform pellet in pellets)
         {
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         gameOverText.enabled = true;
+        Leaderboard.SetActive(true);
 
         for (int i = 0; i < ghosts.Length; i++)
         {

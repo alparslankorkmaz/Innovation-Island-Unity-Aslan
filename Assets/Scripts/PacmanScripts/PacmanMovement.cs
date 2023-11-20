@@ -12,10 +12,6 @@ public class PacmanMovement : MonoBehaviour
     public Vector2 nextDirection;
     public Vector3 startingPosition;
 
-    float inputHorizontal;
-    float inputVertical;
-
-
 
     private void Awake()
     {
@@ -47,12 +43,9 @@ public class PacmanMovement : MonoBehaviour
             SetDirection(nextDirection);
         }
 
-
         // Rotate pacman to face the movement direction
         // float angle = Mathf.Atan2(inputVertical, inputHorizontal);
         // transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
-
-
     }
 
 
@@ -64,15 +57,6 @@ public class PacmanMovement : MonoBehaviour
         Vector2 translation = direction * speed * speedMultiplier * Time.fixedDeltaTime;
 
         rigidbody.MovePosition(position + translation);
-
-        // Mobile adaptation
-        // inputHorizontal = SimpleInput.GetAxis("Horizontal");
-        // inputVertical = SimpleInput.GetAxis("Vertical");
-
-        // rigidbody.velocity = new Vector2(inputHorizontal, inputVertical) * speed;
-
-
-
     }
 
     public void SetDirection(Vector2 direction, bool forced = false)

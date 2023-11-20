@@ -45,6 +45,7 @@ public class Pacman : MonoBehaviour
             movement.SetDirection(Vector2.right);
         }
 
+        // Rotate pacman to face the movement direction
         if (SimpleInput.GetKeyDown(KeyCode.RightArrow) && !facingRight)
         {
             Flip();
