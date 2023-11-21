@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Transform pellets;
 
     public Button PlayButton;
+    public Button PlayAgainButton;
     public GameObject MainMenu;
 
     public Text gameOverText;
@@ -24,14 +25,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    // private void OnEnable()
-    // {
-    //     PlayButton.onClick.AddListener(NewGame);
-    // }
-    // private void OnDisable()
-    // {
-    //     PlayButton.onClick.RemoveListener(NewGame);
-    // }
+    private void OnEnable()
+    {
+        PlayButton.onClick.AddListener(NewGame);
+        PlayAgainButton.onClick.AddListener(NewGame);
+    }
+    private void OnDisable()
+    {
+        PlayButton.onClick.RemoveListener(NewGame);
+        PlayAgainButton.onClick.RemoveListener(NewGame);
+    }
 
 
     // private void Start()

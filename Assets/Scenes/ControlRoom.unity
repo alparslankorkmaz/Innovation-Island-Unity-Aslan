@@ -11703,6 +11703,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5125325206282898210, guid: 4b0e16dc306f74f7aabec2230310a4a3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286741954953777112, guid: 4b0e16dc306f74f7aabec2230310a4a3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7717339782439739645, guid: 4b0e16dc306f74f7aabec2230310a4a3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764051164220255805, guid: 4b0e16dc306f74f7aabec2230310a4a3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0e16dc306f74f7aabec2230310a4a3, type: 3}
 --- !u!1001 &511372148
@@ -12633,7 +12649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1731282758222391192, guid: 03cbc624397194a09988349f7972d03d, type: 3}
       propertyPath: orthographic size
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1731282758222391192, guid: 03cbc624397194a09988349f7972d03d, type: 3}
       propertyPath: m_BackGroundColor.b
