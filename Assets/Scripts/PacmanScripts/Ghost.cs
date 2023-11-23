@@ -27,6 +27,18 @@ public class Ghost : MonoBehaviour
         ResetState();
     }
 
+    private void Update()
+    {
+        // Rotate bug to face the movement direction
+        float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
+        angle *= Mathf.Rad2Deg; // Convert angle to degrees
+
+        // Adjust the angle based on the difference in coordinate systems
+        angle -= 90f;
+
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
     public void ResetState()
     {
         gameObject.SetActive(true);
