@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public Button PlayButton;
     public Button PlayAgainButton;
+    public GameObject SendScoreButton;
+    public TMP_InputField InputField;
     public GameObject MainMenu;
 
     public Text gameOverText;
@@ -87,6 +90,9 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.enabled = true;
         Leaderboard.SetActive(true);
+        SendScoreButton.gameObject.SetActive(true);
+        InputField.text = "";
+        // InputField.gameObject.SetActive(true);
 
         for (int i = 0; i < ghosts.Length; i++)
         {
