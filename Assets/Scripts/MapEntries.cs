@@ -23,7 +23,7 @@ public class MapEntries : MonoBehaviour
     private string JobTitle;
     private string CompanyName;
 
-    private string BASE_URL = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSf0sKfT3E_5JRgT5U-05ipgJxww3KJO9HVpj2gYd0uo4mobcQ/formResponse";
+    private string BASE_URL = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScm20nME8KcbQv8hff6iq7s6ZTfP5gaJyant1AhvasSMsRaLA/formResponse";
 
     public void Send()
     {
@@ -64,12 +64,12 @@ public class MapEntries : MonoBehaviour
     IEnumerator Post(string firstName, string lastName, string email, string phone, string jobTitle, string companyName)
     {
         WWWForm form = new WWWForm();
-        form.AddField("entry.1943161009", firstName);
-        form.AddField("entry.393587298", lastName);
-        form.AddField("entry.1387890886", email);
-        form.AddField("entry.841762636", phone);
-        form.AddField("entry.1239679491", jobTitle);
-        form.AddField("entry.233812255", companyName);
+        form.AddField("entry.1139963256", firstName);
+        form.AddField("entry.1301130157", lastName);
+        form.AddField("entry.2108970010", email);
+        form.AddField("entry.1868571392", phone);
+        form.AddField("entry.231133381", jobTitle);
+        form.AddField("entry.1527627084", companyName);
 
         UnityWebRequest www = UnityWebRequest.Post(BASE_URL, form);
         yield return www.SendWebRequest();
