@@ -8,10 +8,11 @@ public class IslandManager : MonoBehaviour
 {
     public Button EnterButton;
 
-    void Awake()
+    private void Awake()
     {
         Time.timeScale = 0f;
     }
+
     private void OnEnable()
     {
         EnterButton.onClick.AddListener(StartGame);
@@ -32,7 +33,7 @@ public class IslandManager : MonoBehaviour
 
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         Time.timeScale = 1f;
     }
