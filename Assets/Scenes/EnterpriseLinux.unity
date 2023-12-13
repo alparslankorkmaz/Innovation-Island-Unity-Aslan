@@ -54078,7 +54078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef04138b5b91476d85eb0a79f2f53d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetButton: {fileID: 0}
+  targetButton: {fileID: 1953023619}
   inputField: {fileID: 1774451556}
 --- !u!1 &1865335614
 GameObject:
@@ -56886,6 +56886,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6339598402085356035, guid: 8571f300f62c543fc949ff8dcd5cd2f0, type: 3}
   m_PrefabInstance: {fileID: 1953023617}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1953023619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6339598401293219460, guid: 8571f300f62c543fc949ff8dcd5cd2f0, type: 3}
+  m_PrefabInstance: {fileID: 1953023617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1953023620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6339598402085356047, guid: 8571f300f62c543fc949ff8dcd5cd2f0, type: 3}
